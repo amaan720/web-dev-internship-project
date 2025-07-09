@@ -1,0 +1,217 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: #f8f9fa;
+  color: #212529;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #0d6efd;
+  padding: 1rem 2rem;
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+header nav a {
+  color: white;
+  margin-left: 1.5rem;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.hero {
+  position: relative;
+  background: url('https://cdn.pixabay.com/photo/2020/04/14/07/04/pharmacy-5043452_1280.jpg') no-repeat center center/cover;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+}
+
+.hero .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 600px;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.btn {
+  background: #198754;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: 600;
+}
+
+.services {
+  padding: 2rem;
+  text-align: center;
+  background: #f1f1f1;
+}
+
+.services h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.card {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  padding: 1.5rem;
+  width: 250px;
+  text-align: center;
+}
+
+.card img {
+  width: 60px;
+  margin-bottom: 1rem;
+}
+
+.contact {
+  padding: 2rem;
+  background: #e3f2fd;
+  text-align: center;
+}
+
+.contact h2 {
+  margin-bottom: 2rem;
+}
+
+.contact-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.contact-container img {
+  width: 200px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+}
+
+form input, form textarea {
+  margin-bottom: 1rem;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+form button {
+  background: #0d6efd;
+  color: white;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#error-msg {
+  color: red;
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+}
+
+footer {
+  background: #0d6efd;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact-container {
+    flex-direction: column;
+  }
+
+  form {
+    width: 90%;
+  }
+
+  .contact-container img {
+    width: 150px;
+  }
+
+  header {
+    flex-direction: column;
+  }
+
+  header nav a {
+    margin: 0.5rem;
+    display: inline-block;
+  }
+}
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 1.5rem;
+  }
+
+  .hero p {
+    font-size: 0.9rem;
+  }
+
+  .card {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  form input, form textarea {
+    width: calc(100% - 1.5rem);
+  }
+}
